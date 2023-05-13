@@ -1,0 +1,9 @@
+CH - 11
+	-create local storage hook
+	-create login hook
+CH - 12 
+	-Create everything with tailwind css
+CH - 13
+	- How do we manage more than 1 context
+	- can context come inside another context
+	- can we have multiple nested contexts?
