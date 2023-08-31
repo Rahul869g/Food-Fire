@@ -1,8 +1,7 @@
 {
-  "name": "namaste-react",
+  "name": "food-fire",
   "version": "1.0.0",
   "description": "Food Delivery App",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -26,6 +25,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "firebase": "^9.23.0",
     "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
