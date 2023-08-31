@@ -8,11 +8,11 @@ export const ITEM_IMG_CDN_URL =
 
 // Swiggy API to get Restaurant data with corsanywhere
 export const swiggy_api_URL =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2299184&lng=73.1338062&page_type=DESKTOP_WEB_LISTING";
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.2299184&lng=73.1338062&page_type=DESKTOP_WEB_LISTING";
 
 // Swiggy API to get Restaurant Menu data with corsanywhere
 export const swiggy_menu_api_URL =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2299184&lng=73.1338062&restaurantId=";
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2299184&lng=73.1338062&restaurantId=";
 
 // shimmer card unit
 export const shimmer_card_unit = 8;
