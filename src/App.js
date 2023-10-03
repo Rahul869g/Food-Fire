@@ -19,7 +19,6 @@ import Store from "./utils/Store";
 import { Provider } from "react-redux";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; // for routing our page import createBrowserRouter and RouterProvider for providing router & Outlet for children component for nested routing
-import NewCart from "./Components/NewCart";
 
 const Instamart = lazy(() => import("./Components/Instamart"));
 

@@ -58,6 +58,7 @@ const Body = () => {
           onChange={(e) => setSearchText(e.target.value)}
         ></input>
         <button
+          data-testid="search-container"
           className="search-btn"
           onClick={() => {
             // user click on button searchData function is called
@@ -73,7 +74,7 @@ const Body = () => {
       {allRestaurants?.length === 0 ? (
         <Shimmer />
       ) : (
-        <div className="restaurant-list">
+        <div className="restaurant-list" data-testid="res-list">
           {/* We are mapping restaurants array and passing JSON array data to RestaurantCard component as props with unique key as restaurant.data.id */}
           {filteredRestaurants.map((restaurant) => {
             return (

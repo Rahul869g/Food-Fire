@@ -20,8 +20,7 @@ export const MenuShimmer = () => {
         <div className="restaurant-summary-details">
           <h2 className="shimmer-w40  stroke animate"></h2>
           <p className="shimmer-w20 stroke animate"></p>
-          <div className="shimmer-w60  stroke animate">
-          </div>
+          <div className="shimmer-w60  stroke animate"></div>
         </div>
       </div>
 
@@ -32,33 +31,37 @@ export const MenuShimmer = () => {
             <p className="shimmer-w20 stroke animate"></p>
           </div>
           <div className="menu-items-list">
-            { Array(shimmer_menu_card_unit).fill("").map( (element, index)  => 
-            <div className="shimmer-menu-card" key={index}>
-              <div className="shimmer-item-details">
-                <h3 className="shimmer-w40  stroke animate"></h3>
-                <p className="shimmer-w20  stroke animate"> </p>
-                <p className="shimmer-w60  stroke animate"></p>
-              </div>
-              <div className="shimmer-img-wrapper">
-                <img className="shimmer-img stroke animate" /> 
-                <div className="shimmer-btn stroke animate"> </div>
-              </div>
-            </div>
-            )}
+            {Array(shimmer_menu_card_unit)
+              .fill("")
+              .map((element, index) => (
+                <div className="shimmer-menu-card" key={index}>
+                  <div className="shimmer-item-details">
+                    <h3 className="shimmer-w40  stroke animate"></h3>
+                    <p className="shimmer-w20  stroke animate"> </p>
+                    <p className="shimmer-w60  stroke animate"></p>
+                  </div>
+                  <div className="shimmer-img-wrapper">
+                    <img className="shimmer-img stroke animate" />
+                    <div className="shimmer-btn stroke animate"> </div>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Shimmer = () => {
   return (
-    <div className="shimmer-container">
+    <div className="shimmer-container" data-testid="shimmer">
       {/* create a new Array instance using Array() constructor and map through every element of array */}
-      {Array(shimmer_card_unit).fill("").map((element, index) => {
-        return <CardShimmer key={index} />;
-      })}
+      {Array(shimmer_card_unit)
+        .fill("")
+        .map((element, index) => {
+          return <CardShimmer key={index} />;
+        })}
     </div>
   );
 };

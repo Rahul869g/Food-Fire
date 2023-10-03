@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import FoodFireLogo from "../assets/Images/Food Fire Logo.png";
+import FoodFireLogo from "../assets/Images/FoodFireLogo.png";
 import { Link } from "react-router-dom"; // imported Link for client side routing
 import { useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 const Title = () => (
   <a href="/">
     <img
+      data-testid="logo"
       className="logo"
       src={FoodFireLogo}
       alt="Food Fire Logo"
@@ -27,7 +28,7 @@ const Header = () => {
   const { user } = useContext(UserContext);
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="header">
@@ -45,7 +46,11 @@ const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="/cart" className="font-bold text-lg transition-all">
+            <Link
+              to="/cart"
+              data-testid="cart-length"
+              className="font-bold text-lg transition-all"
+            >
               Cart {cartItems.length}
             </Link>
           </li>
@@ -57,6 +62,7 @@ const Header = () => {
             {/* use conditional rendering for login and logout */}
             {isLoggedin ? (
               <button
+                data-testid="online-status"
                 className="logout-btn"
                 onClick={() => setIsLoggedin(false)}
               >
