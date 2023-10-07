@@ -8,7 +8,7 @@ const RestaurantCard = ({
   area,
   lastMileTravelString,
   costForTwoString,
-  avgRating,
+  avgRating
 }) => {
   return (
     <div className="card">
